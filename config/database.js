@@ -1,3 +1,4 @@
+// Database spawn specifications left as default for TA testing.
 module.exports = {
  'connection': {
    'host': 'localhost',

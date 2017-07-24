@@ -12,8 +12,8 @@ module.exports = function(app, passport) {
   });
 
   app.post('/login', passport.authenticate('local-login', {
-            successRedirect: '/main', // redirect to the secure profile section
-            failureRedirect: '/login', // redirect back to the signup page if there is an error
+            successRedirect: '/main', 
+            failureRedirect: '/login', 
             failureFlash: true
           }),
   function(req, res) {
@@ -49,7 +49,6 @@ module.exports = function(app, passport) {
   });
 };
 
-// Authentication middleware to ensure user is always logged on
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated())
     return next();
