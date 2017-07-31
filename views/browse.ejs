@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <title>Buy on Studentals</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+    body {
+        padding-top: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Studentals</h1>
+            <h2>Find a sublet or housing rental today!</h2>
+        </div>
+    </div>
+    <div class="container">
+    <table class="table-hover" align="center" border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <th>Housing Name</th>
+            <th>Description</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Price</th>
+        </tr>
+        <% if(data.length){ 
+    for(var i = 0;i < data.length;i++) { %>
+            <tr>
+                <td>
+                    <%=data[i].housingname%>
+                </td>
+                <td>
+                    <%=data[i].description%>
+                </td>
+                <td>
+                    <%=data[i].address%>
+                </td>
+                <td>
+                    <%=data[i].contact%>
+                </td>
+                <td>
+                    <%=data[i].price%>
+                </td>
+            </tr>
+            <% }
+  }else{ %>
+                <tr>
+                    <td colspan="3">No housing available</td>
+                </tr>
+                <% } %>
+    </table>
+    </div>
+</body>
+</html>
