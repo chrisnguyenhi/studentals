@@ -18,10 +18,7 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 app.use(bodyParser.json());
-
-// ejs used for templating html code
 app.set('view engine', 'ejs'); 
-// Passport session info
 app.use(session({
 	secret: 'hashed123%',
 	resave: true,
