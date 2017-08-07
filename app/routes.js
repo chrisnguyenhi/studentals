@@ -14,6 +14,10 @@ module.exports = function(app, passport) {
     res.render('main.ejs');
   });
 
+  app.get('/terms', function(req, res) {
+    res.render('terms.ejs');
+  });
+
   app.get('/login', function(req, res) {
     res.render('login.ejs', { message: req.flash('loginMessage') });
   });
