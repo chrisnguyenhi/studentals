@@ -26,6 +26,7 @@ CREATE TABLE `' + dbconfig.database + '`.`' + dbconfig.housing_table + '` ( \
     `price` VARCHAR(20) NOT NULL, \
         PRIMARY KEY (`id`), \
     UNIQUE INDEX `id_UNIQUE` (`id` ASC), \
+    UNIQUE INDEX `housingname_UNIQUE` (`housingname` ASC) \
 )');
 
 console.log('Success: Database Created!')
